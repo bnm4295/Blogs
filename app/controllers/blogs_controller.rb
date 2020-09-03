@@ -22,7 +22,7 @@ class BlogsController < ApplicationController
     @blog = Post.new(blog_params)
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to action: "index", notice: 'Your blog has been created!' }
+        format.html { redirect_to blog_path(@blog), notice: 'Your blog has been created!' }
       else
         format.html { render :new }
       end

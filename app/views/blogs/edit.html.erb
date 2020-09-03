@@ -17,11 +17,15 @@
   <br>
   <div class = "field">
     <h4>Description</h4> <br>
-    <textarea id="post[text]" rows="15" cols="100" name="post[text]" placeholder="Interesting..." class="form-control"></textarea>
+    <textarea id="post[text]" rows="15" cols="100" name="post[text]" placeholder="Interesting..." class="form-control"><%= @blog.text %></textarea>
   </div>
   <br>
   <div class = "field">
     <h4>Photo</h4><br>
+    <div style="width: 100%; height: auto">
+      <%= image_tag(@blog.photo) %>
+    </div>
+    <br>
     <%= f.file_field :photo %>
   </div>
   <br>

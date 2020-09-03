@@ -12,11 +12,3 @@
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, class: "alert alert-info" %>
 <% end %>
-
-<script type="text/javascript">
-  $(function() {
-    setTimeout(function(){
-      $('.alert').slideUp(500);
-    }, 1000);
-  });
-</script>

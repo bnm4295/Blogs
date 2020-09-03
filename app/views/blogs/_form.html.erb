@@ -1,5 +1,13 @@
 <%= form_for(@blog, url: blogs_path) do |f| %>
 <div class="container">
+  <% if @blog.errors.any? %>
+    <h2>Errors:</h2>
+    <ul>
+    <% @blog.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
   <div class="field">
     <h4>Title</h4><br>
     <%= f.text_field :title %>

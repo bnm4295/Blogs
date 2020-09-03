@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<head>
+   <%= stylesheet_link_tag "application" %>
+</head>
+
+<body>
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @blog.text %>
+</p>
+
+<div style="width: 400px; height: auto">
+  <%= image_tag(@blog.photo) %>
+</div>
+
+
+<div style = "position: absolute;">
+<%= link_to 'Edit', edit_blog_path(@blog) %>
+<%= link_to 'Back', blogs_path %>
+</div>
+
+
+</body>
